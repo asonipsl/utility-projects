@@ -1,0 +1,360 @@
+ul,li {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#container {
+	height: 768px;
+}
+
+.graphHeadings {
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 5px;
+	line-height: 30px;
+}
+
+.infoPanel {
+	height: 10%;
+}
+
+.infoPanel img {
+	float: left;
+    height: 110%;
+    width: 5%;
+}
+
+.infoPanel ul li {
+	 background-color: #DCDCDC;
+    border-right: 1px solid white;
+    float: left;
+    font-size: large;
+    height: 50px;
+    padding: 1% 1% 2%;
+    text-align: center;
+    width: 15.9%;
+}
+
+.infoPanel ul li span#data {
+	font-size: xx-large;
+	height: 50px;
+	width: 100%;
+}
+
+.timelineDiv {
+	height: 5%;
+	margin: 1% 0;
+}
+
+.breadcrumbsDiv {
+	border-bottom: 1px solid;
+	border-top: 1px solid;
+	height: 5%;
+	line-height: 40px;
+	margin: 2% 0;
+}
+
+#breadcrumbs {
+	overflow: auto;
+}
+
+#breadcrumbs li {
+	float: left;
+	padding-left: 8px;
+}
+
+#breadcrumbs li a {
+	padding: 0 24px 2px 0;
+	background: transparent url(../images/blue-arrow.png) no-repeat right
+		center; 3
+	text-decoration: underline;
+	color: #0099CC;
+	cursor: pointer;
+}
+
+#breadcrumbs li a:link,#breadcrumbs li a:visited {
+	/* text-decoration: none; */
+	color: #003366;
+}
+
+/* #breadcrumbs li a:hover,#breadcrumbs li a:focus {
+	text-decoration: underline;
+	color: #0099CC;
+} */
+.leftPanelDiv {
+	background-color: white;
+	float: left;
+	height: 85%;
+	width: 25%;
+}
+
+#classificationTagsDiv {
+	height: 58%;
+}
+
+#classificationTagsTabs {
+	border: medium none;
+	font-size: 12px;
+	height: 30px;
+	width: 90%;
+}
+
+#classificationTab {
+	height: 280px;
+    padding-left: 20%;
+    padding-top: 10px;
+}
+
+#keywordsDiv {
+	height: 42%;
+}
+
+.rightPanelDiv {
+	background-color: white;
+	float: left;
+	height: 75%;
+	width: 75%;
+}
+.rightPanelDiv #disputeDashboard{
+	height:100%;
+	width:100%;
+	margin-top: 1%;
+}
+#disputeMapDiv {
+	height: 62%;	
+}
+#map{
+	width:98%;
+	height:90%;
+}
+#cableSentDiv {
+	height: 40%;
+    margin-top: 1%;	
+}
+.rightPanelDiv #disputeDashboardDetails{
+	height:100%;
+	width:100%;
+}
+.rightPanelDiv #disputeDashboardDetails #upperDiv{
+	height:52%;
+	width:100%;
+}
+.rightPanelDiv #disputeDashboardDetails #lowerDiv{
+	height:48%;
+	width:100%;
+	margin-top:4%;	
+}
+.rightPanelDiv #disputeDashboardDetails #upperDiv #infoHeaderDiv{
+	color: #DC143C;
+    height: 0%;
+    padding-left: 35%;
+    width: 100%;
+}
+.rightPanelDiv #disputeDashboardDetails #upperDiv #conflictCableSentDiv{
+	height:100%;
+    width: 73%;
+	margin-left: -3%;
+	float:left;
+}
+.rightPanelDiv #disputeDashboardDetails #upperDiv #proAntiChartDiv{
+	height:100%;
+	width:30%;
+	float:left;
+}
+.rightPanelDiv #disputeDashboardDetails #lowerDiv #countrySentimentDiv{
+	height:95%;
+	width:50%;
+	float:left;	
+}
+.rightPanelDiv #disputeDashboardDetails #lowerDiv #personSentimentDiv{
+	width:50%;
+	height:95%;
+	float:left;	
+}
+
+.footerDiv {
+	background-color: #DCDCDC;
+	border: 1px solid #DCDCDC;
+	clear: both;
+	line-height: 40px;
+	text-align: center;
+	color: gray;
+	margin-top:5%;
+}
+.disputeCount{
+	width:5%;
+	height:2%;
+}
+.tooltip {
+    background: none repeat scroll 0 0 white;
+    border: 2px solid lightgrey;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 2px 5px 4px rgba(1, 1, 1, 0.7);
+    font-family: Verdana;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 10px;
+    position: absolute;
+    visibility: hidden;
+    z-index: 9999;
+}
+/*************** Treemap specific style starts here *****************/
+.node {
+	border: solid 1px white;
+	font: 15px sans-serif;
+	line-height: 20px;
+	overflow: hidden;
+	position: absolute;
+	text-indent: 2px;
+}
+/*************** Treemap specific style ends here *****************/
+
+/************* keyword specific style starts here ********************/
+.barChart {
+	background: #FFFFFF;
+	margin: 5px;
+}
+
+.barChart rect {
+	fill: #4682B4;
+}
+
+.barChart text {
+	fill: #c4c4c4;
+	font-weight: bold;
+}
+
+.barChart rect:hover {
+	fill: #284483;
+}
+/************* keyword specific style ends here ********************/
+
+/************* area graph specific style ends here ********************/
+#cableSentDiv .axis path,#cableSentDiv .axis line {
+	stroke: lightgrey;
+	opacity: 0.7;
+	shape-rendering: crispEdges;
+}
+
+#cableSentDiv .area {
+	fill: #53476D;
+}
+/************* area graph specific style ends here ********************/
+
+/************* line Chart specific style ends here ********************/
+#disputeDashboardDetails .axis path,
+.axis line {
+  fill: none;
+  stroke: #d4d4d4;
+  shape-rendering: crispEdges;
+}
+#disputeDashboardDetails .y text {
+  display:none;
+}
+#disputeDashboardDetails .x path {
+  stroke:#000000;
+}
+#disputeDashboardDetails #upperDiv .y text {
+  display:block;
+}
+#disputeDashboardDetails .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+#disputeDashboardDetails .line .hover{  
+  stroke-width: 3px;
+}
+#disputeDashboardDetails .dot {
+  fill: white;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+#disputeDashboardDetails .dot {
+  fill: white;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+.legend_ul{
+	position:absolute;
+	list-style-type: square;
+	margin-left: 4%;
+    margin-top: -2.5%;
+    width:30%;
+}
+.legend_ul li{
+	float:left;
+	list-style-type: square;
+    padding-right: 18px;
+    opacity:1.0;
+}
+
+.legend_ul li .active{
+	opacity:1.0;
+}
+.legend_ul li .inactive{
+	opacity:0.4;
+}
+/************* line Chart specific style ends here *******************/
+#proAntiChartDiv{
+	-moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+}
+/* #proAntiChartDiv .proanti_lable{
+	-moz-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+} */
+/************ Count Information box style starts here *******************/
+#upsDownCauseDiv{
+	background:none repeat scroll 0 0 transparent;
+	border-radius: 5px 5px 5px 5px;
+	position: absolute;
+    display: none;
+    width:600px;
+    height:500px;
+    z-index: 9999;
+}
+.shadow{
+	/* background:none repeat scroll 0 0 grey;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	position:absolute;
+	z-index: 10; */
+	visibility:hidden;
+	position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 10;
+    opacity: 0.6;
+    filter: alpha(opacity = 50);
+}
+
+#upsDownCauseDiv #closeBtn{
+   background: none repeat scroll 0 0 red;
+    border: 2px solid lightgrey;
+    border-radius: 5px 5px 5px 5px;
+    float: right;
+    font-weight: bold;
+    height: 4%;
+    left: 915px;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 7%;
+}
+#upsDownCauseDiv .content{
+    height: 95%;
+    padding: 5px;
+    width: 100%;
+}
+/************ Count Information box style ends here *******************/
