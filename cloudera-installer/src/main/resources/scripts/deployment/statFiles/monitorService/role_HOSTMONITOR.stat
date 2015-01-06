@@ -1,0 +1,18 @@
+{
+   "name": "mgmt1-HOSTMONITOR-{ROLECOUNT}",
+   "type": "HOSTMONITOR",
+   "hostRef":
+   {
+	   "hostId": "{HOSTID}"
+   },
+   "config":
+   {
+	   "items":
+	   [
+	   ]
+   },
+   "roleConfigGroupRef":
+   {
+	   "roleConfigGroupName": "mgmt1-HOSTMONITOR-BASE"
+   }
+}

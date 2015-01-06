@@ -1,0 +1,22 @@
+{
+   "name": "zookeeper1-SERVER-{ROLECOUNT}",
+   "type": "SERVER",
+   "hostRef":
+   {
+	   "hostId": "{HOSTID}"
+   },
+   "config":
+   {
+	   "items":
+	   [
+		   {
+			   "name": "serverId",
+			   "value": "{SERVERID}"
+		   }
+	   ]
+   },
+   "roleConfigGroupRef":
+   {
+	   "roleConfigGroupName": "zookeeper1-SERVER-BASE"
+   }
+}

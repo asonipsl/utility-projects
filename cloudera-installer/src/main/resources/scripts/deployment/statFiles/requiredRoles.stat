@@ -1,0 +1,6 @@
+hdfs:	Datanode
+hbase:	RegionServer
+MapReduce:	Tasktracker
+hive:	GATEWAY
+zookeeper:	zkServer
+oozie

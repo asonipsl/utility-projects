@@ -1,0 +1,18 @@
+{
+   "name": "hbase1-REGIONSERVER-{ROLECOUNT}",
+   "type": "REGIONSERVER",
+   "hostRef":
+   {
+	   "hostId": "{HOSTID}"
+   },
+   "config":
+   {
+	   "items":
+	   [
+	   ]
+   },
+   "roleConfigGroupRef":
+   {
+	   "roleConfigGroupName": "hbase1-REGIONSERVER-BASE"
+   }
+}

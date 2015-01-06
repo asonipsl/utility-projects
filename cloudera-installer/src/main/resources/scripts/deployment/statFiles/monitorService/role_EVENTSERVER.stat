@@ -1,0 +1,18 @@
+{
+   "name": "mgmt1-EVENTSERVER-{ROLECOUNT}",
+   "type": "EVENTSERVER",
+   "hostRef":
+   {
+	   "hostId": "{HOSTID}"
+   },
+   "config":
+   {
+	   "items":
+	   [
+	   ]
+   },
+   "roleConfigGroupRef":
+   {
+	   "roleConfigGroupName": "mgmt1-EVENTSERVER-BASE"
+   }
+}

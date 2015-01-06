@@ -1,0 +1,1166 @@
+{
+    "allHostsConfig": {
+        "items": []
+    }, 
+    "managementService": {
+        "displayName": "mgmt1", 
+        "name": "mgmt1", 
+        "roles": [
+            {
+                "roleConfigGroupRef": {
+                    "roleConfigGroupName": "mgmt1-ACTIVITYMONITOR-BASE"
+                }, 
+                "config": {
+                    "items": []
+                }, 
+                "type": "ACTIVITYMONITOR", 
+                "name": "mgmt1-ACTIVITYMONITOR-1", 
+                "hostRef": {
+                    "hostId": "v-ng-01f8.persistent.co.in"
+                }
+            }, 
+            {
+                "roleConfigGroupRef": {
+                    "roleConfigGroupName": "mgmt1-ALERTPUBLISHER-BASE"
+                }, 
+                "config": {
+                    "items": []
+                }, 
+                "type": "ALERTPUBLISHER", 
+                "name": "mgmt1-ALERTPUBLISHER-1", 
+                "hostRef": {
+                    "hostId": "v-ng-01f8.persistent.co.in"
+                }
+            }, 
+            {
+                "roleConfigGroupRef": {
+                    "roleConfigGroupName": "mgmt1-EVENTSERVER-BASE"
+                }, 
+                "config": {
+                    "items": []
+                }, 
+                "type": "EVENTSERVER", 
+                "name": "mgmt1-EVENTSERVER-1", 
+                "hostRef": {
+                    "hostId": "v-ng-01f8.persistent.co.in"
+                }
+            }, 
+            {
+                "roleConfigGroupRef": {
+                    "roleConfigGroupName": "mgmt1-HOSTMONITOR-BASE"
+                }, 
+                "config": {
+                    "items": []
+                }, 
+                "type": "HOSTMONITOR", 
+                "name": "mgmt1-HOSTMONITOR-1", 
+                "hostRef": {
+                    "hostId": "v-ng-01f8.persistent.co.in"
+                }
+            }, 
+            {
+                "roleConfigGroupRef": {
+                    "roleConfigGroupName": "mgmt1-SERVICEMONITOR-BASE"
+                }, 
+                "config": {
+                    "items": []
+                }, 
+                "type": "SERVICEMONITOR", 
+                "name": "mgmt1-SERVICEMONITOR-1", 
+                "hostRef": {
+                    "hostId": "v-ng-01f8.persistent.co.in"
+                }
+            }
+        ], 
+        "type": "MGMT", 
+        "roleConfigGroups": [
+            {
+                "roleType": "ACTIVITYMONITOR", 
+                "displayName": "Activity Monitor (Default)", 
+                "name": "mgmt1-ACTIVITYMONITOR-BASE", 
+                "serviceRef": {
+                    "serviceName": "mgmt1"
+                }, 
+                "base": true, 
+                "config": {
+                    "items": [
+                        {
+                            "name": "firehose_database_host", 
+                            "value": "v-ng-01f8.persistent.co.in:7432"
+                        }, 
+                        {
+                            "name": "firehose_database_name", 
+                            "value": "amon"
+                        }, 
+                        {
+                            "name": "firehose_database_password", 
+                            "value": "RcNtczZ0uF"
+                        }, 
+                        {
+                            "name": "firehose_database_type", 
+                            "value": "postgresql"
+                        }, 
+                        {
+                            "name": "firehose_database_user", 
+                            "value": "amon"
+                        }, 
+                        {
+                            "name": "firehose_heapsize", 
+                            "value": "268435456"
+                        }
+                    ]
+                }
+            }, 
+            {
+                "roleType": "ALERTPUBLISHER", 
+                "displayName": "Alert Publisher (Default)", 
+                "name": "mgmt1-ALERTPUBLISHER-BASE", 
+                "serviceRef": {
+                    "serviceName": "mgmt1"
+                }, 
+                "base": true, 
+                "config": {
+                    "items": []
+                }
+            }, 
+            {
+                "roleType": "EVENTSERVER", 
+                "displayName": "Event Server (Default)", 
+                "name": "mgmt1-EVENTSERVER-BASE", 
+                "serviceRef": {
+                    "serviceName": "mgmt1"
+                }, 
+                "base": true, 
+                "config": {
+                    "items": []
+                }
+            }, 
+            {
+                "roleType": "HOSTMONITOR", 
+                "displayName": "Host Monitor (Default)", 
+                "name": "mgmt1-HOSTMONITOR-BASE", 
+                "serviceRef": {
+                    "serviceName": "mgmt1"
+                }, 
+                "base": true, 
+                "config": {
+                    "items": [
+                        {
+                            "name": "firehose_database_host", 
+                            "value": "v-ng-01f8.persistent.co.in:7432"
+                        }, 
+                        {
+                            "name": "firehose_database_name", 
+                            "value": "hmon"
+                        }, 
+                        {
+                            "name": "firehose_database_password", 
+                            "value": "LjH647UL6k"
+                        }, 
+                        {
+                            "name": "firehose_database_type", 
+                            "value": "postgresql"
+                        }, 
+                        {
+                            "name": "firehose_database_user", 
+                            "value": "hmon"
+                        }, 
+                        {
+                            "name": "firehose_heapsize", 
+                            "value": "268435456"
+                        }
+                    ]
+                }
+            }, 
+            {
+                "roleType": "NAVIGATOR", 
+                "displayName": "Navigator Server (Default)", 
+                "name": "mgmt1-NAVIGATOR-BASE", 
+                "serviceRef": {
+                    "serviceName": "mgmt1"
+                }, 
+                "base": true, 
+                "config": {
+                    "items": []
+                }
+            }, 
+            {
+                "roleType": "REPORTSMANAGER", 
+                "displayName": "Reports Manager (Default)", 
+                "name": "mgmt1-REPORTSMANAGER-BASE", 
+                "serviceRef": {
+                    "serviceName": "mgmt1"
+                }, 
+                "base": true, 
+                "config": {
+                    "items": []
+                }
+            }, 
+            {
+                "roleType": "SERVICEMONITOR", 
+                "displayName": "Service Monitor (Default)", 
+                "name": "mgmt1-SERVICEMONITOR-BASE", 
+                "serviceRef": {
+                    "serviceName": "mgmt1"
+                }, 
+                "base": true, 
+                "config": {
+                    "items": [
+                        {
+                            "name": "firehose_database_host", 
+                            "value": "v-ng-01f8.persistent.co.in:7432"
+                        }, 
+                        {
+                            "name": "firehose_database_name", 
+                            "value": "smon"
+                        }, 
+                        {
+                            "name": "firehose_database_password", 
+                            "value": "C0ulb8HXVC"
+                        }, 
+                        {
+                            "name": "firehose_database_type", 
+                            "value": "postgresql"
+                        }, 
+                        {
+                            "name": "firehose_database_user", 
+                            "value": "smon"
+                        }, 
+                        {
+                            "name": "firehose_heapsize", 
+                            "value": "268435456"
+                        }
+                    ]
+                }
+            }
+        ], 
+        "config": {
+            "items": []
+        }
+    }, 
+    "users": [
+        {
+            "pwLogin": true, 
+            "name": "cloudera_internal_user__mgmt1-ACTIVITYMONITOR-1", 
+            "pwSalt": -6297374651669360000, 
+            "pwHash": "ed4dde635f1f5f367b4d9bb75bd1fa85f66c0d9705a1af450722bb36f41beb3d"
+        }, 
+        {
+            "pwLogin": true, 
+            "name": "cloudera_internal_user__mgmt1-EVENTSERVER-1", 
+            "pwSalt": -5154025885535023000, 
+            "pwHash": "bc7b6e2316e9860697d2d83ccff699cf53c6a3ea4f5782f3d4b32063feb2e1c9"
+        }, 
+        {
+            "pwLogin": true, 
+            "name": "cloudera_internal_user__mgmt1-HOSTMONITOR-1", 
+            "pwSalt": 7216349968125718000, 
+            "pwHash": "dfd2b85fc8a56769bb19947535a09af78df9b5bf196a4050452b09a22fb3cfcb"
+        }, 
+        {
+            "pwLogin": true, 
+            "name": "cloudera_internal_user__mgmt1-SERVICEMONITOR-1", 
+            "pwSalt": 350464933025314100, 
+            "pwHash": "41b706ee18a95488e0ff42daa07ac679b4bad0ae400edd8fae1363e2d2c660c7"
+        }, 
+        {
+            "pwSalt": 1414749218379848200, 
+            "pwLogin": true, 
+            "name": "admin", 
+            "roles": [
+                "ROLE_ADMIN"
+            ], 
+            "pwHash": "af0f40828c6b152be89f1b9773b545234b4aea9fdd0d04aa6e998c95823a57f9"
+        }
+    ], 
+    "managerSettings": {
+        "items": [
+            {
+                "name": "PUBLIC_CLOUD_STATUS", 
+                "value": "NOT_ON_PUBLIC_CLOUD"
+            }, 
+            {
+                "name": "REMOTE_PARCEL_REPO_URLS", 
+                "value": "http://archive-primary.cloudera.com/cdh4/parcels/4.6.0.26/"
+            }
+        ]
+    }, 
+    "peers": [], 
+    "hosts": [
+        {
+            "config": {
+                "items": []
+            }, 
+            "rackId": "/default", 
+            "hostId": "v-ng-01f8.persistent.co.in", 
+            "ipAddress": "10.222.116.161", 
+            "hostname": "v-ng-01f8.persistent.co.in"
+        }, 
+        {
+            "config": {
+                "items": []
+            }, 
+            "rackId": "/default", 
+            "hostId": "v-ng-01f9.persistent.co.in", 
+            "ipAddress": "10.222.116.85", 
+            "hostname": "v-ng-01f9.persistent.co.in"
+        }, 
+        {
+            "config": {
+                "items": []
+            }, 
+            "rackId": "/default", 
+            "hostId": "v-ng-01fa.persistent.co.in", 
+            "ipAddress": "10.222.116.163", 
+            "hostname": "v-ng-01fa.persistent.co.in"
+        }
+    ], 
+    "clusters": [
+        {
+            "services": [
+                {
+                    "displayName": "hdfs1", 
+                    "name": "hdfs1", 
+                    "roles": [
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "hdfs1-NAMENODE-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "NAMENODE", 
+                            "name": "hdfs1-NAMENODE-1", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f8.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "hdfs1-BALANCER-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "BALANCER", 
+                            "name": "hdfs1-BALANCER-3", 
+                            "hostRef": {
+                                "hostId": "v-ng-01fa.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "hdfs1-DATANODE-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "DATANODE", 
+                            "name": "hdfs1-DATANODE-1", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f8.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "hdfs1-DATANODE-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "DATANODE", 
+                            "name": "hdfs1-DATANODE-2", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f9.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "hdfs1-DATANODE-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "DATANODE", 
+                            "name": "hdfs1-DATANODE-3", 
+                            "hostRef": {
+                                "hostId": "v-ng-01fa.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "hdfs1-SECONDARYNAMENODE-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "SECONDARYNAMENODE", 
+                            "name": "hdfs1-SECONDARYNAMENODE-2", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f9.persistent.co.in"
+                            }
+                        }
+                    ], 
+                    "type": "HDFS", 
+                    "roleConfigGroups": [
+                        {
+                            "roleType": "BALANCER", 
+                            "displayName": "Balancer (Default)", 
+                            "name": "hdfs1-BALANCER-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hdfs1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": []
+                            }
+                        }, 
+                        {
+                            "roleType": "DATANODE", 
+                            "displayName": "DataNode (Default)", 
+                            "name": "hdfs1-DATANODE-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hdfs1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": [
+                                    {
+                                        "name": "dfs_data_dir_list", 
+                                        "value": "/opt/dfs/dn"
+                                    }, 
+                                    {
+                                        "name": "dfs_datanode_du_reserved", 
+                                        "value": "6763708006"
+                                    }
+                                ]
+                            }
+                        }, 
+                        {
+                            "roleType": "FAILOVERCONTROLLER", 
+                            "displayName": "Failover Controller (Default)", 
+                            "name": "hdfs1-FAILOVERCONTROLLER-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hdfs1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": []
+                            }
+                        }, 
+                        {
+                            "roleType": "GATEWAY", 
+                            "displayName": "Gateway (Default)", 
+                            "name": "hdfs1-GATEWAY-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hdfs1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": [
+                                    {
+                                        "name": "dfs_client_use_trash", 
+                                        "value": "true"
+                                    }
+                                ]
+                            }
+                        }, 
+                        {
+                            "roleType": "HTTPFS", 
+                            "displayName": "HttpFS (Default)", 
+                            "name": "hdfs1-HTTPFS-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hdfs1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": []
+                            }
+                        }, 
+                        {
+                            "roleType": "JOURNALNODE", 
+                            "displayName": "JournalNode (Default)", 
+                            "name": "hdfs1-JOURNALNODE-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hdfs1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": []
+                            }
+                        }, 
+                        {
+                            "roleType": "NAMENODE", 
+                            "displayName": "NameNode (Default)", 
+                            "name": "hdfs1-NAMENODE-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hdfs1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": [
+                                    {
+                                        "name": "dfs_name_dir_list", 
+                                        "value": "/opt/dfs/nn"
+                                    }, 
+                                    {
+                                        "name": "dfs_namenode_servicerpc_address", 
+                                        "value": "8022"
+                                    }
+                                ]
+                            }
+                        }, 
+                        {
+                            "roleType": "SECONDARYNAMENODE", 
+                            "displayName": "SecondaryNameNode (Default)", 
+                            "name": "hdfs1-SECONDARYNAMENODE-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hdfs1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": [
+                                    {
+                                        "name": "fs_checkpoint_dir_list", 
+                                        "value": "/opt/dfs/snn"
+                                    }
+                                ]
+                            }
+                        }
+                    ], 
+                    "config": {
+                        "items": [
+                            {
+                                "name": "dfs_ha_fencing_cloudera_manager_secret_key", 
+                                "value": "UmffNAM8SUHbzRBdvHSmhueA6hK1c2"
+                            }, 
+                            {
+                                "name": "fc_authorization_secret_key", 
+                                "value": "KLnyw6smIVnCfXOBZRm5I4XoCnVmCS"
+                            }, 
+                            {
+                                "name": "http_auth_signature_secret", 
+                                "value": "ENMiiCqDp1ofiqwBHRKtnMvxY1A4Uw"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "displayName": "hbase1", 
+                    "name": "hbase1", 
+                    "roles": [
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "hbase1-MASTER-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "MASTER", 
+                            "name": "hbase1-MASTER-1", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f8.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "hbase1-REGIONSERVER-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "REGIONSERVER", 
+                            "name": "hbase1-REGIONSERVER-1", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f8.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "hbase1-REGIONSERVER-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "REGIONSERVER", 
+                            "name": "hbase1-REGIONSERVER-2", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f9.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "hbase1-REGIONSERVER-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "REGIONSERVER", 
+                            "name": "hbase1-REGIONSERVER-3", 
+                            "hostRef": {
+                                "hostId": "v-ng-01fa.persistent.co.in"
+                            }
+                        }
+                    ], 
+                    "type": "HBASE", 
+                    "roleConfigGroups": [
+                        {
+                            "roleType": "GATEWAY", 
+                            "displayName": "Gateway (Default)", 
+                            "name": "hbase1-GATEWAY-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hbase1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": []
+                            }
+                        }, 
+                        {
+                            "roleType": "HBASERESTSERVER", 
+                            "displayName": "HBase REST Server (Default)", 
+                            "name": "hbase1-HBASERESTSERVER-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hbase1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": []
+                            }
+                        }, 
+                        {
+                            "roleType": "HBASETHRIFTSERVER", 
+                            "displayName": "HBase Thrift Server (Default)", 
+                            "name": "hbase1-HBASETHRIFTSERVER-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hbase1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": []
+                            }
+                        }, 
+                        {
+                            "roleType": "MASTER", 
+                            "displayName": "Master (Default)", 
+                            "name": "hbase1-MASTER-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hbase1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": []
+                            }
+                        }, 
+                        {
+                            "roleType": "REGIONSERVER", 
+                            "displayName": "RegionServer (Default)", 
+                            "name": "hbase1-REGIONSERVER-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hbase1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": [
+                                    {
+                                        "name": "hbase_regionserver_config_safety_valve", 
+                                        "value": "<property><name>hbase.snapshot.enabled</name><value>true</value></property>"
+                                    }
+                                ]
+                            }
+                        }
+                    ], 
+                    "config": {
+                        "items": [
+                            {
+                                "name": "hbase_service_config_safety_valve", 
+                                "value": "<property><name>hbase.snapshot.enabled</name><value>true</value></property>"
+                            }, 
+                            {
+                                "name": "hdfs_service", 
+                                "value": "hdfs1"
+                            }, 
+                            {
+                                "name": "zookeeper_service", 
+                                "value": "zookeeper1"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "displayName": "hive1", 
+                    "name": "hive1", 
+                    "roles": [
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "hive1-GATEWAY-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "GATEWAY", 
+                            "name": "hive1-GATEWAY-1", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f8.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "hive1-GATEWAY-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "GATEWAY", 
+                            "name": "hive1-GATEWAY-2", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f9.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "hive1-GATEWAY-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "GATEWAY", 
+                            "name": "hive1-GATEWAY-3", 
+                            "hostRef": {
+                                "hostId": "v-ng-01fa.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "hive1-HIVEMETASTORE-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "HIVEMETASTORE", 
+                            "name": "hive1-HIVEMETASTORE-1", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f8.persistent.co.in"
+                            }
+                        }
+                    ], 
+                    "type": "HIVE", 
+                    "roleConfigGroups": [
+                        {
+                            "roleType": "GATEWAY", 
+                            "displayName": "Gateway (Default)", 
+                            "name": "hive1-GATEWAY-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hive1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": []
+                            }
+                        }, 
+                        {
+                            "roleType": "HIVEMETASTORE", 
+                            "displayName": "Hive Metastore Server (Default)", 
+                            "name": "hive1-HIVEMETASTORE-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hive1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": []
+                            }
+                        }, 
+                        {
+                            "roleType": "HIVESERVER2", 
+                            "displayName": "HiveServer2 (Default)", 
+                            "name": "hive1-HIVESERVER2-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hive1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": []
+                            }
+                        }, 
+                        {
+                            "roleType": "WEBHCAT", 
+                            "displayName": "WebHCat Server (Default)", 
+                            "name": "hive1-WEBHCAT-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "hive1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": []
+                            }
+                        }
+                    ], 
+                    "config": {
+                        "items": [
+                            {
+                                "name": "hive_metastore_database_auto_create_schema", 
+                                "value": "true"
+                            }, 
+                            {
+                                "name": "hive_metastore_database_fixed_datastore", 
+                                "value": "false"
+                            }, 
+                            {
+                                "name": "hive_metastore_database_host", 
+                                "value": "v-ng-01f8.persistent.co.in"
+                            }, 
+                            {
+                                "name": "hive_metastore_database_name", 
+                                "value": "hive"
+                            }, 
+                            {
+                                "name": "hive_metastore_database_password", 
+                                "value": "hIve123"
+                            }, 
+                            {
+                                "name": "hive_metastore_database_port", 
+                                "value": "7432"
+                            }, 
+                            {
+                                "name": "hive_metastore_database_type", 
+                                "value": "postgresql"
+                            }, 
+                            {
+                                "name": "hive_metastore_database_user", 
+                                "value": "hive"
+                            }, 
+                            {
+                                "name": "mapreduce_yarn_service", 
+                                "value": "mapreduce1"
+                            }, 
+                            {
+                                "name": "zookeeper_service", 
+                                "value": "zookeeper1"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "displayName": "oozie1", 
+                    "name": "oozie1", 
+                    "roles": [
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "oozie1-OOZIE_SERVER-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "OOZIE_SERVER", 
+                            "name": "oozie1-OOZIE_SERVER-1", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f8.persistent.co.in"
+                            }
+                        }
+                    ], 
+                    "type": "OOZIE", 
+                    "roleConfigGroups": [
+                        {
+                            "roleType": "OOZIE_SERVER", 
+                            "displayName": "Oozie Server (Default)", 
+                            "name": "oozie1-OOZIE_SERVER-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "oozie1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": []
+                            }
+                        }
+                    ], 
+                    "config": {
+                        "items": [
+                            {
+                                "name": "mapreduce_yarn_service", 
+                                "value": "mapreduce1"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "displayName": "zookeeper1", 
+                    "name": "zookeeper1", 
+                    "roles": [
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "zookeeper1-SERVER-BASE"
+                            }, 
+                            "config": {
+                                "items": [
+                                    {
+                                        "name": "serverId", 
+                                        "value": "1"
+                                    }
+                                ]
+                            }, 
+                            "type": "SERVER", 
+                            "name": "zookeeper1-SERVER-1", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f8.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "zookeeper1-SERVER-BASE"
+                            }, 
+                            "config": {
+                                "items": [
+                                    {
+                                        "name": "serverId", 
+                                        "value": "2"
+                                    }
+                                ]
+                            }, 
+                            "type": "SERVER", 
+                            "name": "zookeeper1-SERVER-2", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f9.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "zookeeper1-SERVER-BASE"
+                            }, 
+                            "config": {
+                                "items": [
+                                    {
+                                        "name": "serverId", 
+                                        "value": "3"
+                                    }
+                                ]
+                            }, 
+                            "type": "SERVER", 
+                            "name": "zookeeper1-SERVER-3", 
+                            "hostRef": {
+                                "hostId": "v-ng-01fa.persistent.co.in"
+                            }
+                        }
+                    ], 
+                    "type": "ZOOKEEPER", 
+                    "roleConfigGroups": [
+                        {
+                            "roleType": "SERVER", 
+                            "displayName": "Server (Default)", 
+                            "name": "zookeeper1-SERVER-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "zookeeper1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": [
+                                    {
+                                        "name": "maxSessionTimeout", 
+                                        "value": "60000"
+                                    }
+                                ]
+                            }
+                        }
+                    ], 
+                    "config": {
+                        "items": [
+                            {
+                                "name": "zookeeper_datadir_autocreate", 
+                                "value": "true"
+                            }
+                        ]
+                    }
+                }, 
+                {
+                    "displayName": "mapreduce1", 
+                    "name": "mapreduce1", 
+                    "roles": [
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "mapreduce1-JOBTRACKER-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "JOBTRACKER", 
+                            "name": "mapreduce1-JOBTRACKER-1", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f8.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "mapreduce1-TASKTRACKER-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "TASKTRACKER", 
+                            "name": "mapreduce1-TASKTRACKER-1", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f8.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "mapreduce1-TASKTRACKER-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "TASKTRACKER", 
+                            "name": "mapreduce1-TASKTRACKER-2", 
+                            "hostRef": {
+                                "hostId": "v-ng-01f9.persistent.co.in"
+                            }
+                        }, 
+                        {
+                            "roleConfigGroupRef": {
+                                "roleConfigGroupName": "mapreduce1-TASKTRACKER-BASE"
+                            }, 
+                            "config": {
+                                "items": []
+                            }, 
+                            "type": "TASKTRACKER", 
+                            "name": "mapreduce1-TASKTRACKER-3", 
+                            "hostRef": {
+                                "hostId": "v-ng-01fa.persistent.co.in"
+                            }
+                        }
+                    ], 
+                    "type": "MAPREDUCE", 
+                    "roleConfigGroups": [
+                        {
+                            "roleType": "FAILOVERCONTROLLER", 
+                            "displayName": "Failover Controller (Default)", 
+                            "name": "mapreduce1-FAILOVERCONTROLLER-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "mapreduce1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": []
+                            }
+                        }, 
+                        {
+                            "roleType": "GATEWAY", 
+                            "displayName": "Gateway (Default)", 
+                            "name": "mapreduce1-GATEWAY-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "mapreduce1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": [
+                                    {
+                                        "name": "mapred_submit_replication", 
+                                        "value": "2"
+                                    }
+                                ]
+                            }
+                        }, 
+                        {
+                            "roleType": "JOBTRACKER", 
+                            "displayName": "JobTracker (Default)", 
+                            "name": "mapreduce1-JOBTRACKER-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "mapreduce1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": [
+                                    {
+                                        "name": "jobtracker_mapred_local_dir_list", 
+                                        "value": "/opt/mapred/jt"
+                                    }, 
+                                    {
+                                        "name": "mapred_job_tracker_handler_count", 
+                                        "value": "22"
+                                    }
+                                ]
+                            }
+                        }, 
+                        {
+                            "roleType": "TASKTRACKER", 
+                            "displayName": "TaskTracker (Default)", 
+                            "name": "mapreduce1-TASKTRACKER-BASE", 
+                            "serviceRef": {
+                                "clusterName": "ML-Test", 
+                                "serviceName": "mapreduce1"
+                            }, 
+                            "base": true, 
+                            "config": {
+                                "items": [
+                                    {
+                                        "name": "mapred_tasktracker_instrumentation", 
+                                        "value": "org.apache.hadoop.mapred.TaskTrackerCmonInst"
+                                    }, 
+                                    {
+                                        "name": "mapred_tasktracker_map_tasks_maximum", 
+                                        "value": "1"
+                                    }, 
+                                    {
+                                        "name": "mapred_tasktracker_reduce_tasks_maximum", 
+                                        "value": "1"
+                                    }, 
+                                    {
+                                        "name": "tasktracker_mapred_local_dir_list", 
+                                        "value": "/opt/mapred/local"
+                                    }
+                                ]
+                            }
+                        }
+                    ], 
+                    "config": {
+                        "items": [
+                            {
+                                "name": "hdfs_service", 
+                                "value": "hdfs1"
+                            }
+                        ]
+                    }
+                }
+            ], 
+            "version": "CDH4", 
+            "name": "ML-Test", 
+            "parcels": [
+                {
+                    "clusterRef": {
+                        "clusterName": "ML-Test"
+                    }, 
+                    "product": "CDH", 
+                    "version": "4.6.0-1.cdh4.6.0.p0.26", 
+                    "stage": "DISTRIBUTED"
+                }
+            ]
+        }
+    ], 
+    "versionInfo": {
+        "buildUser": "jenkins", 
+        "version": "4.8.2", 
+        "snapshot": false, 
+        "buildTimestamp": "20140226-1855", 
+        "gitHash": "8609801079d228f2440a493a3880ab68cad0524b"
+    }
+}

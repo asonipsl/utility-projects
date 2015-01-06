@@ -1,0 +1,927 @@
+{
+   "clusters":
+   [
+	   {
+		   "name": "{ML_CLUSTER_1}",
+		   "version": "CDH4",
+		   "services":
+		   [
+			   {
+				   "name": "hdfs1",
+				   "type": "HDFS",
+				   "config":
+				   {
+					   "items":
+					   [
+						   {
+							   "name": "dfs_ha_fencing_cloudera_manager_secret_key",
+							   "value": "UmffNAM8SUHbzRBdvHSmhueA6hK1c2"
+						   },
+						   {
+							   "name": "fc_authorization_secret_key",
+							   "value": "KLnyw6smIVnCfXOBZRm5I4XoCnVmCS"
+						   },
+						   {
+							   "name": "http_auth_signature_secret",
+							   "value": "ENMiiCqDp1ofiqwBHRKtnMvxY1A4Uw"
+						   }
+					   ]
+				   },
+				   "roles":
+				   [
+				   ],
+				   "displayName": "hdfs1",
+				   "roleConfigGroups":
+				   [
+					   {
+						   "name": "hdfs1-BALANCER-BASE",
+						   "displayName": "Balancer (Default)",
+						   "roleType": "BALANCER",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hdfs1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+							   ]
+						   }
+					   },
+					   {
+						   "name": "hdfs1-DATANODE-BASE",
+						   "displayName": "DataNode (Default)",
+						   "roleType": "DATANODE",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hdfs1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+								   {
+									   "name": "dfs_data_dir_list",
+									   "value": "/opt/dfs/dn"
+								   },
+								   {
+									   "name": "dfs_datanode_du_reserved",
+									   "value": "6763708006"
+								   }
+							   ]
+						   }
+					   },
+					   {
+						   "name": "hdfs1-FAILOVERCONTROLLER-BASE",
+						   "displayName": "Failover Controller (Default)",
+						   "roleType": "FAILOVERCONTROLLER",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hdfs1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+							   ]
+						   }
+					   },
+					   {
+						   "name": "hdfs1-GATEWAY-BASE",
+						   "displayName": "Gateway (Default)",
+						   "roleType": "GATEWAY",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hdfs1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+								   {
+									   "name": "dfs_client_use_trash",
+									   "value": "true"
+								   }
+							   ]
+						   }
+					   },
+					   {
+						   "name": "hdfs1-HTTPFS-BASE",
+						   "displayName": "HttpFS (Default)",
+						   "roleType": "HTTPFS",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hdfs1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+							   ]
+						   }
+					   },
+					   {
+						   "name": "hdfs1-JOURNALNODE-BASE",
+						   "displayName": "JournalNode (Default)",
+						   "roleType": "JOURNALNODE",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hdfs1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+							   ]
+						   }
+					   },
+					   {
+						   "name": "hdfs1-NAMENODE-BASE",
+						   "displayName": "NameNode (Default)",
+						   "roleType": "NAMENODE",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hdfs1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+								   {
+									   "name": "dfs_name_dir_list",
+									   "value": "/opt/dfs/nn"
+								   },
+								   {
+									   "name": "dfs_namenode_servicerpc_address",
+									   "value": "8022"
+								   }
+							   ]
+						   }
+					   },
+					   {
+						   "name": "hdfs1-SECONDARYNAMENODE-BASE",
+						   "displayName": "SecondaryNameNode (Default)",
+						   "roleType": "SECONDARYNAMENODE",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hdfs1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+								   {
+									   "name": "fs_checkpoint_dir_list",
+									   "value": "/opt/dfs/snn"
+								   }
+							   ]
+						   }
+					   }
+				   ]
+			   },
+			   {
+				   "name": "hbase1",
+				   "type": "HBASE",
+				   "config":
+				   {
+					   "items":
+					   [
+						   {
+								"name" : "hbase_service_config_safety_valve",
+							    "value" : "<property><name>hbase.snapshot.enabled</name><value>true</value></property>"
+						   },
+						   {
+							   "name": "hdfs_service",
+							   "value": "hdfs1"
+						   },
+						   {
+							   "name": "zookeeper_service",
+							   "value": "zookeeper1"
+						   }
+					   ]
+				   },
+				   "roles":
+				   [
+				   ],
+				   "displayName": "hbase1",
+				   "roleConfigGroups":
+				   [
+					   {
+						   "name": "hbase1-GATEWAY-BASE",
+						   "displayName": "Gateway (Default)",
+						   "roleType": "GATEWAY",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hbase1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+							   ]
+						   }
+					   },
+					   {
+						   "name": "hbase1-HBASERESTSERVER-BASE",
+						   "displayName": "HBase REST Server (Default)",
+						   "roleType": "HBASERESTSERVER",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hbase1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+							   ]
+						   }
+					   },
+					   {
+						   "name": "hbase1-HBASETHRIFTSERVER-BASE",
+						   "displayName": "HBase Thrift Server (Default)",
+						   "roleType": "HBASETHRIFTSERVER",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hbase1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+							   ]
+						   }
+					   },
+					   {
+						   "name": "hbase1-MASTER-BASE",
+						   "displayName": "Master (Default)",
+						   "roleType": "MASTER",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hbase1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+							   ]
+						   }
+					   },
+					   {
+						   "name": "hbase1-REGIONSERVER-BASE",
+						   "displayName": "RegionServer (Default)",
+						   "roleType": "REGIONSERVER",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hbase1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+									{
+										"name" : "hbase_regionserver_config_safety_valve",
+										"value" : "<property><name>hbase.snapshot.enabled</name><value>true</value></property>"
+								    }
+							   ]
+						   }
+					   }
+				   ]
+			   },
+			   {
+				   "name": "hive1",
+				   "type": "HIVE",
+				   "config":
+				   {
+					   "items":
+					   [
+						   {
+							   "name": "hive_metastore_database_auto_create_schema",
+							   "value": "true"
+						   },
+						   {
+							   "name" : "hive_metastore_database_fixed_datastore",
+							   "value" : "false"
+						   },
+						   {
+							   "name": "hive_metastore_database_host",
+							   "value": "{HIVE_METASTORE_HOSTNAME}"
+						   },
+						   {
+							   "name": "hive_metastore_database_name",
+							   "value": "{HIVE_DB_NAME}"
+						   },
+						   {
+							   "name": "hive_metastore_database_password",
+							   "value": "{HIVE_DB_PASSWORD}"
+						   },
+						   {
+							   "name": "hive_metastore_database_port",
+							   "value": "{HIVE_METASTORE_PORT}"
+						   },
+						   {
+							   "name": "hive_metastore_database_type",
+							   "value": "postgresql"
+						   },
+						   {
+							   "name": "hive_metastore_database_user",
+							   "value": "{HIVE_DB_USER}"
+						   },
+						   {
+							   "name": "mapreduce_yarn_service",
+							   "value": "mapreduce1"
+						   },
+						   {
+							   "name": "zookeeper_service",
+							   "value": "zookeeper1"
+						   }
+					   ]
+				   },
+				   "roles":
+				   [
+				   ],
+				   "displayName": "hive1",
+				   "roleConfigGroups":
+				   [
+					   {
+						   "name": "hive1-GATEWAY-BASE",
+						   "displayName": "Gateway (Default)",
+						   "roleType": "GATEWAY",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hive1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+							   ]
+						   }
+					   },
+					   {
+						   "name": "hive1-HIVEMETASTORE-BASE",
+						   "displayName": "Hive Metastore Server (Default)",
+						   "roleType": "HIVEMETASTORE",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hive1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+							   ]
+						   }
+					   },
+					   {
+						   "name": "hive1-HIVESERVER2-BASE",
+						   "displayName": "HiveServer2 (Default)",
+						   "roleType": "HIVESERVER2",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hive1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+							   ]
+						   }
+					   },
+					   {
+						   "name": "hive1-WEBHCAT-BASE",
+						   "displayName": "WebHCat Server (Default)",
+						   "roleType": "WEBHCAT",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "hive1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+							   ]
+						   }
+					   }
+				   ]
+			   },
+			   {
+				   "name": "oozie1",
+				   "type": "OOZIE",
+				   "config":
+				   {
+					   "items":
+					   [
+						   {
+							   "name": "mapreduce_yarn_service",
+							   "value": "mapreduce1"
+						   }
+					   ]
+				   },
+				   "roles":
+				   [
+				   ],
+				   "displayName": "oozie1",
+				   "roleConfigGroups":
+				   [
+					   {
+						   "name": "oozie1-OOZIE_SERVER-BASE",
+						   "displayName": "Oozie Server (Default)",
+						   "roleType": "OOZIE_SERVER",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "oozie1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+							   ]
+						   }
+					   }
+				   ]
+			   },
+			   {
+				   "name": "zookeeper1",
+				   "type": "ZOOKEEPER",
+				   "config":
+				   {
+					   "items":
+					   [
+						{
+							"name" : "zookeeper_datadir_autocreate",
+							"value" : "true"
+						}
+					   ]
+				   },
+				   "roles":
+				   [
+				   ],
+				   "displayName": "zookeeper1",
+				   "roleConfigGroups":
+				   [
+					   {
+						   "name": "zookeeper1-SERVER-BASE",
+						   "displayName": "Server (Default)",
+						   "roleType": "SERVER",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "zookeeper1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+								   {
+									   "name": "maxSessionTimeout",
+									   "value": "60000"
+								   }
+								   
+							   ]
+						   }
+					   }
+				   ]
+			   },
+			   {
+				   "name": "mapreduce1",
+				   "type": "MAPREDUCE",
+				   "config":
+				   {
+					   "items":
+					   [
+						   {
+							   "name": "hdfs_service",
+							   "value": "hdfs1"
+						   }
+					   ]
+				   },
+				   "roles":
+				   [
+				   ],
+				   "displayName": "mapreduce1",
+				   "roleConfigGroups":
+				   [
+					   {
+						   "name": "mapreduce1-FAILOVERCONTROLLER-BASE",
+						   "displayName": "Failover Controller (Default)",
+						   "roleType": "FAILOVERCONTROLLER",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "mapreduce1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+							   ]
+						   }
+					   },
+					   {
+						   "name": "mapreduce1-GATEWAY-BASE",
+						   "displayName": "Gateway (Default)",
+						   "roleType": "GATEWAY",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "mapreduce1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+								   {
+									   "name": "mapred_submit_replication",
+									   "value": "2"
+								   }
+							   ]
+						   }
+					   },
+					   {
+						   "name": "mapreduce1-JOBTRACKER-BASE",
+						   "displayName": "JobTracker (Default)",
+						   "roleType": "JOBTRACKER",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "mapreduce1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+								   {
+									   "name": "jobtracker_mapred_local_dir_list",
+									   "value": "/opt/mapred/jt"
+								   },
+								   {
+									   "name": "mapred_job_tracker_handler_count",
+									   "value": "22"
+								   }
+							   ]
+						   }
+					   },
+					   {
+						   "name": "mapreduce1-TASKTRACKER-BASE",
+						   "displayName": "TaskTracker (Default)",
+						   "roleType": "TASKTRACKER",
+						   "base": true,
+						   "serviceRef":
+						   {
+							   "clusterName": "{ML_CLUSTER_1}",
+							   "serviceName": "mapreduce1"
+						   },
+						   "config":
+						   {
+							   "items":
+							   [
+								   {
+									   "name": "mapred_tasktracker_instrumentation",
+									   "value": "org.apache.hadoop.mapred.TaskTrackerCmonInst"
+								   },
+								   {
+									   "name": "mapred_tasktracker_map_tasks_maximum",
+									   "value": "1"
+								   },
+								   {
+									   "name": "mapred_tasktracker_reduce_tasks_maximum",
+									   "value": "1"
+								   },
+								   {
+									   "name": "tasktracker_mapred_local_dir_list",
+									   "value": "/opt/mapred/local"
+								   }
+							   ]
+						   }
+					   }
+				   ]
+			   }
+		   ],
+		   "parcels":
+		   [
+			   {
+				   "product": "CDH",
+				   "version": "4.6.0-1.cdh4.6.0.p0.26",
+				   "stage": "DISTRIBUTED",
+				   "clusterRef":
+				   {
+					   "clusterName": "{ML_CLUSTER_1}"
+				   }
+			   }
+		   ]
+	   }
+   ],
+   "hosts":
+   [
+   ],
+   "users":
+   [
+	   {
+		   "name": "cloudera_internal_user__mgmt1-ACTIVITYMONITOR-1",
+		   "pwHash": "ed4dde635f1f5f367b4d9bb75bd1fa85f66c0d9705a1af450722bb36f41beb3d",
+		   "pwSalt": -6297374651669360000,
+		   "pwLogin": true
+	   },
+	   {
+		   "name": "cloudera_internal_user__mgmt1-EVENTSERVER-1",
+		   "pwHash": "bc7b6e2316e9860697d2d83ccff699cf53c6a3ea4f5782f3d4b32063feb2e1c9",
+		   "pwSalt": -5154025885535023000,
+		   "pwLogin": true
+	   },
+	   {
+		   "name": "cloudera_internal_user__mgmt1-HOSTMONITOR-1",
+		   "pwHash": "dfd2b85fc8a56769bb19947535a09af78df9b5bf196a4050452b09a22fb3cfcb",
+		   "pwSalt": 7216349968125718000,
+		   "pwLogin": true
+	   },
+	   {
+		   "name": "cloudera_internal_user__mgmt1-SERVICEMONITOR-1",
+		   "pwHash": "41b706ee18a95488e0ff42daa07ac679b4bad0ae400edd8fae1363e2d2c660c7",
+		   "pwSalt": 350464933025314100,
+		   "pwLogin": true
+	   },
+	   {
+		   "name": "admin",
+		   "roles":
+		   [
+			   "ROLE_ADMIN"
+		   ],
+		   "pwHash": "af0f40828c6b152be89f1b9773b545234b4aea9fdd0d04aa6e998c95823a57f9",
+		   "pwSalt": 1414749218379848200,
+		   "pwLogin": true
+	   }
+   ],
+   "versionInfo":
+   {
+	   "version": "4.8.2",
+	   "buildUser": "jenkins",
+	   "buildTimestamp": "20140226-1855",
+	   "gitHash": "8609801079d228f2440a493a3880ab68cad0524b",
+	   "snapshot": false
+   },
+   "managementService":
+   {
+	   "name": "mgmt1",
+	   "type": "MGMT",
+	   "config":
+	   {
+		   "items":
+		   [
+		   ]
+	   },
+	   "roles":
+	   [
+	   ],
+	   "displayName": "mgmt1",
+	   "roleConfigGroups":
+	   [
+		   {
+			   "name": "mgmt1-ACTIVITYMONITOR-BASE",
+			   "displayName": "Activity Monitor (Default)",
+			   "roleType": "ACTIVITYMONITOR",
+			   "base": true,
+			   "serviceRef":
+			   {
+				   "serviceName": "mgmt1"
+			   },
+			   "config":
+			   {
+				   "items":
+				   [
+					   {
+						   "name": "firehose_database_host",
+						   "value": "{ACTIVITYMONITOR_DB_HOST}"
+					   },
+					   {
+						   "name": "firehose_database_name",
+						   "value": "{ACTIVITYMONITOR_DB_NAME}"
+					   },
+					   {
+						   "name": "firehose_database_password",
+						   "value": "{ACTIVITYMONITOR_DB_PSWD}"
+					   },
+					   {
+						   "name": "firehose_database_type",
+						   "value": "postgresql"	
+					   },
+					   {
+						   "name": "firehose_database_user",
+						   "value": "{ACTIVITYMONITOR_DB_USER}"
+					   },
+					   {
+						   "name": "firehose_heapsize",
+						   "value": "268435456"
+					   }
+				   ]
+			   }
+		   },
+		   {
+			   "name": "mgmt1-ALERTPUBLISHER-BASE",
+			   "displayName": "Alert Publisher (Default)",
+			   "roleType": "ALERTPUBLISHER",
+			   "base": true,
+			   "serviceRef":
+			   {
+				   "serviceName": "mgmt1"
+			   },
+			   "config":
+			   {
+				   "items":
+				   [
+				   ]
+			   }
+		   },
+		   {
+			   "name": "mgmt1-EVENTSERVER-BASE",
+			   "displayName": "Event Server (Default)",
+			   "roleType": "EVENTSERVER",
+			   "base": true,
+			   "serviceRef":
+			   {
+				   "serviceName": "mgmt1"
+			   },
+			   "config":
+			   {
+				   "items":
+				   [
+				   ]
+			   }
+		   },
+		   {
+			   "name": "mgmt1-HOSTMONITOR-BASE",
+			   "displayName": "Host Monitor (Default)",
+			   "roleType": "HOSTMONITOR",
+			   "base": true,
+			   "serviceRef":
+			   {
+				   "serviceName": "mgmt1"
+			   },
+			   "config":
+			   {
+				   "items":
+				   [
+					   {
+						   "name": "firehose_database_host",
+						   "value": "{HOSTMONITOR_DB_HOST}"
+					   },
+					   {
+						   "name": "firehose_database_name",
+						   "value": "{HOSTMONITOR_DB_NAME}"
+					   },
+					   {
+						   "name": "firehose_database_password",
+						   "value": "{HOSTMONITOR_DB_PSWD}"
+					   },
+					   {
+						   "name": "firehose_database_type",
+						   "value": "postgresql"
+					   },
+					   {
+						   "name": "firehose_database_user",
+						   "value": "{HOSTMONITOR_DB_USER}"
+					   },
+					   {
+							"name": "firehose_heapsize",
+							"value": "268435456"
+					   }
+				   ]
+			   }
+		   },
+		   {
+			   "name": "mgmt1-NAVIGATOR-BASE",
+			   "displayName": "Navigator Server (Default)",
+			   "roleType": "NAVIGATOR",
+			   "base": true,
+			   "serviceRef":
+			   {
+				   "serviceName": "mgmt1"
+			   },
+			   "config":
+			   {
+				   "items":
+				   [
+				   ]
+			   }
+		   },
+		   {
+			   "name": "mgmt1-REPORTSMANAGER-BASE",
+			   "displayName": "Reports Manager (Default)",
+			   "roleType": "REPORTSMANAGER",
+			   "base": true,
+			   "serviceRef":
+			   {
+				   "serviceName": "mgmt1"
+			   },
+			   "config":
+			   {
+				   "items":
+				   [
+				   ]
+			   }
+		   },
+		   {
+			   "name": "mgmt1-SERVICEMONITOR-BASE",
+			   "displayName": "Service Monitor (Default)",
+			   "roleType": "SERVICEMONITOR",
+			   "base": true,
+			   "serviceRef":
+			   {
+				   "serviceName": "mgmt1"
+			   },
+			   "config":
+			   {
+				   "items":
+				   [
+					   {
+						   "name": "firehose_database_host",
+						   "value": "{SERVICEMONITOR_DB_HOST}"
+					   },
+					   {
+						   "name": "firehose_database_name",
+						   "value": "{SERVICEMONITOR_DB_NAME}"
+					   },
+					   {
+						   "name": "firehose_database_password",
+						   "value": "{SERVICEMONITOR_DB_PSWD}"
+					   },
+					   {
+						   "name": "firehose_database_type",
+						   "value": "postgresql"
+					   },
+					   {
+						   "name": "firehose_database_user",
+						   "value": "{SERVICEMONITOR_DB_USER}"
+					   },
+					   {
+							"name": "firehose_heapsize",
+							"value": "268435456"
+					   }
+				   ]
+			   }
+		   }
+	   ]
+   },
+   "managerSettings":
+   {
+	   "items":
+	   [
+		   {
+			   "name": "PUBLIC_CLOUD_STATUS",
+			   "value": "NOT_ON_PUBLIC_CLOUD"
+		   },
+		   {
+			   "name": "REMOTE_PARCEL_REPO_URLS",
+			   "value": "http://archive-primary.cloudera.com/cdh4/parcels/4.6.0.26/"
+		   }
+	   ]
+   },
+   "allHostsConfig":
+   {
+	   "items":
+	   [
+	   ]
+   },
+   "peers":
+   [
+   ]
+}

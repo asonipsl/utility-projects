@@ -1,0 +1,12 @@
+{
+   "hostId": "{HOSTID}",
+   "ipAddress": "{HOSTIP}",
+   "hostname": "{HOSTID}",
+   "rackId": "/default",
+   "config":
+   {
+	   "items":
+	   [
+	   ]
+   }
+}

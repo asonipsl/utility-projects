@@ -1,0 +1,18 @@
+{
+   "name": "oozie1-OOZIE_SERVER-{ROLECOUNT}",
+   "type": "OOZIE_SERVER",
+   "hostRef":
+   {
+	   "hostId": "{HOSTID}"
+   },
+   "config":
+   {
+	   "items":
+	   [
+	   ]
+   },
+   "roleConfigGroupRef":
+   {
+	   "roleConfigGroupName": "oozie1-OOZIE_SERVER-BASE"
+   }
+}

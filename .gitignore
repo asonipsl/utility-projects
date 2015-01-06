@@ -14,3 +14,5 @@ hs_err_pid*
 # class and project files
 .classpath
 .project
+# All target directories
+target

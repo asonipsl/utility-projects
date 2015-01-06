@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class AppTest
     extends TestCase
 {
     /**
@@ -34,5 +34,10 @@ public class AppTest
     public void testApp()
     {
         assertTrue( true );
+    }
+
+    @org.junit.Test
+    public void testGetSquare(){
+    	assertEquals((double)25, App.getSquare(5));
     }
 }

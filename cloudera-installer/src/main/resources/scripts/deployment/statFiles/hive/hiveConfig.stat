@@ -1,0 +1,45 @@
+{
+   "items":
+   [
+	   {
+		"name": "hive_metastore_database_auto_create_schema",
+		"value": "true"
+	   },
+	   {
+		"name" : "hive_metastore_database_fixed_datastore",
+		"value" : "false"
+	   },
+	   {
+		"name": "hive_metastore_database_host",
+		"value": "{HOSTID}"
+	   },
+	   {
+		"name": "hive_metastore_database_name",
+		"value": "{HIVE_METASTORE_DATABASE_NAME}"
+	   },
+	   {
+		"name": "hive_metastore_database_password",
+		"value": "{HIVE_METASTORE_DATABASE_PSWD}"
+	   },
+	   {
+		"name": "hive_metastore_database_port",
+		"value": "7432"
+	   },
+	   {
+		"name": "hive_metastore_database_type",
+		"value": "postgresql"
+	   },
+	   {
+		"name": "hive_metastore_database_user",
+		"value": "hive"
+	   },
+	   {
+		"name": "mapreduce_yarn_service",
+		"value": "mapreduce1"
+	   },
+	   {
+		"name": "zookeeper_service",
+		"value": "zookeeper1"
+	   }
+   ]
+}

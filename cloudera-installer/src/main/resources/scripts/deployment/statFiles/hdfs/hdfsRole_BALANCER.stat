@@ -1,0 +1,13 @@
+{
+	"name" : "hdfs1-BALANCER-{ROLECOUNT}",
+	"type" : "BALANCER",
+	"hostRef" : {
+	  "hostId" : "{HOSTID}"
+	},
+	"config" : {
+	  "items" : [ ]
+	},
+	"roleConfigGroupRef" : {
+	  "roleConfigGroupName" : "hdfs1-BALANCER-BASE"
+	}
+}
